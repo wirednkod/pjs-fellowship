@@ -30,9 +30,7 @@ const main = async () => {
     const fellowshipMembers = await api.query.fellowshipCollective.members;
 
     const keys = await fellowshipMembers.keys();
-    const fellowMembersId = keys.map(({ args: [id] }) => {
-      return id;
-    });
+    const fellowMembersId = keys.map(({ args: [id] }) => id);
 
     const promises: any[] = [];
     fellowMembersId.forEach((member: any) => {
