@@ -35,7 +35,6 @@ const main = async () => {
     });
 
     const promises: any[] = [];
-    console.log("fellowMembersRankId", fellowMembersId.length);
     fellowMembersId.forEach((member: any) => {
       promises.push(api.query.identity.identityOf(member));
     });
